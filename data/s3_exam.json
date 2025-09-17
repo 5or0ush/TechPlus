@@ -1,0 +1,17 @@
+[
+  {"q":"Which computing device type is optimized to serve multiple simultaneous users and tasks?","choices":["Workstation","Server","Laptop","IoT sensor"],"answer":1,"explain":"Servers manage multiple users, sessions, and resources concurrently."},
+  {"q":"Which device combines portability with integrated display, battery, and keyboard?","choices":["Server","Workstation","Laptop","Embedded device"],"answer":2,"explain":"Laptops integrate all components for portability."},
+  {"q":"What gesture on a smartphone screen is commonly used to zoom out?","choices":["Double-tap","Pinch-in","Swipe left","Tap-and-hold"],"answer":1,"explain":"Pinch-in is the gesture for zooming out."},
+  {"q":"Which mode disables cellular, Wi-Fi, and Bluetooth simultaneously?","choices":["Do Not Disturb","Silent Mode","Airplane Mode","Low Power Mode"],"answer":2,"explain":"Airplane Mode disables all radios by default."},
+  {"q":"What is the main benefit of an e-ink display compared to LCD?","choices":["High refresh rate","Readability in sunlight and low power use","Supports VR","More colors"],"answer":1,"explain":"E-ink is visible outdoors and uses little power."},
+  {"q":"AR differs from VR in that:","choices":["AR fully immerses the user","AR overlays digital info on real world","VR uses physical devices only","VR cannot show 3D"],"answer":1,"explain":"AR overlays information; VR replaces environment fully."},
+  {"q":"Which console supports both handheld and docked TV gameplay?","choices":["PlayStation 5","Xbox Series X","Nintendo Switch","Steam Deck"],"answer":2,"explain":"Nintendo Switch is hybrid handheld/TV."},
+  {"q":"Which is a key security concern with IoT devices?","choices":["High cost","Weak default passwords and poor update support","Limited color depth","Too much storage"],"answer":1,"explain":"IoT devices often lack strong security defaults or patching."},
+  {"q":"An office installs motion sensors and smart lighting. These are:","choices":["Servers","IoT devices","Workstations","AR equipment"],"answer":1,"explain":"Connected smart sensors and lights are IoT."},
+  {"q":"Which wireless tech is common in smart home IoT networking?","choices":["Zigbee","Ethernet","Thunderbolt","FireWire"],"answer":0,"explain":"Zigbee is designed for low-power IoT devices."},
+  {"q":"What is a typical use of MDM (mobile device management)?","choices":["Faster CPUs","Central control of device apps and security","Enable 8K video","Increase disk speed"],"answer":1,"explain":"MDM manages and secures fleets of mobile devices."},
+  {"q":"Which mobile OS is open source and widely adopted worldwide?","choices":["iOS","Android","Windows Phone","BlackBerry OS"],"answer":1,"explain":"Android is open-source and dominates global smartphone market share."},
+  {"q":"What is the disadvantage of e-ink displays?","choices":["High power usage","Limited refresh rate unsuitable for video","Not readable in sunlight","Too expensive"],"answer":1,"explain":"E-ink is low power but slow, unsuitable for video."},
+  {"q":"Which reality technology is commonly used for flight simulators?","choices":["AR","VR","IoT","Embedded"],"answer":1,"explain":"VR immerses users in a simulated environment."},
+  {"q":"Smartwatches are best classified as:","choices":["Workstations","Servers","IoT wearable devices","Embedded industrial PCs"],"answer":2,"explain":"Smartwatches are consumer IoT wearables."}
+]
