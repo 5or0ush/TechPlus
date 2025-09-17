@@ -1,0 +1,17 @@
+[
+  {"q":"Which internet service typically offers dedicated bandwidth not shared with neighbors?","choices":["Cable","DSL","Satellite","Cellular"],"answer":1,"explain":"DSL bandwidth is per line; cable shares neighborhood segments."},
+  {"q":"Maximum UTP Ethernet cable length per run:","choices":["50 m","100 m","300 m","1 km"],"answer":1,"explain":"Twisted-pair Ethernet is limited to 100 m without active gear."},
+  {"q":"Which device connects different networks and selects best paths?","choices":["Switch","Router","Modem","Access point"],"answer":1,"explain":"Routers interconnect networks using routing tables."},
+  {"q":"A switch improves performance over a hub because it:","choices":["Encrypts traffic","Filters by MAC address","Assigns IPs","Provides wireless"],"answer":1,"explain":"Switches forward only to the destination MAC port."},
+  {"q":"In TCP/IP, which layer handles reliable, connection-oriented delivery?","choices":["Internet","Host-to-Host","Application","Network Access"],"answer":1,"explain":"TCP lives in the Host-to-Host layer."},
+  {"q":"Default gateway provides:","choices":["Access to local hosts","A route to external networks","DNS translation","Email forwarding"],"answer":1,"explain":"Traffic for other subnets goes to the gateway router."},
+  {"q":"SMTP sending uses port:","choices":["110","25","21","143"],"answer":1,"explain":"SMTP = TCP 25."},
+  {"q":"Which Wi-Fi standard first added dual-band (2.4/5 GHz)?","choices":["802.11b","802.11g","802.11n","802.11ax"],"answer":2,"explain":"802.11n supports both bands."},
+  {"q":"Correct order from weakest to strongest Wi-Fi security:","choices":["WEP < WPA < WPA2 < WPA3","WEP < WPA2 < WPA < WPA3","WPA3 < WPA2 < WPA < WEP","WPA < WEP < WPA2 < WPA3"],"answer":0,"explain":"WEP is weakest; WPA3 is strongest."},
+  {"q":"Which addressing uniquely identifies a host at hardware level on a LAN?","choices":["IP","Port","MAC","Subnet mask"],"answer":2,"explain":"MAC is the layer-2 hardware identifier."},
+  {"q":"Service that auto-assigns IP, mask, gateway, DNS:","choices":["DNS","DHCP","NAT","IMAP"],"answer":1,"explain":"DHCP provides automatic configuration."},
+  {"q":"Why is satellite internet poor for real-time gaming?","choices":["Low throughput","High latency","Shared bandwidth","Limited availability"],"answer":1,"explain":"Long propagation delay to orbit raises latency ~250–350 ms."},
+  {"q":"Which Wi-Fi band offers highest speeds but shortest range?","choices":["2.4 GHz","5 GHz","6 GHz","900 MHz"],"answer":2,"explain":"6 GHz (Wi-Fi 6E/7) is fast with short range."},
+  {"q":"Local centralized storage appliance for a LAN:","choices":["Cloud","NAS","Direct-attached HDD","RAID 0"],"answer":1,"explain":"NAS is a simple network file server device."},
+  {"q":"Command that shows each router hop to a destination:","choices":["ping","netstat","traceroute/tracert","ipconfig"],"answer":2,"explain":"Traceroute (tracert on Windows) lists hop path."}
+]
