@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tech+ Practice</title>
+<style>
+:root{--ok:#22c55e;--okbg:#063e22;--bad:#ef4444;--badbg:#3b0f0f;--ink:#e5e7eb;--muted:#94a3b8;--card:#0b1220;--ui:#0a0f1a;--border:#334155}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--ui);color:var(--ink);margin:0}
+.wrap{max-width:1000px;margin:24px auto 80px;padding:0 16px}
+h1{font-size:22px;margin:12px 0 8px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.btn,select{background:#1f2937;color:#e5e7eb;border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer}
+.btn:hover{filter:brightness(1.15)}
+select{cursor:pointer}
+.block{display:inline-flex;gap:8px;align-items:center}
+.question{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin:14px 0}
+.qtitle{font-weight:600;margin-bottom:10px}
+.options{display:grid;gap:8px}
+.opt{display:grid;grid-template-columns:1.2em 1fr;gap:8px;align-items:start;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card);cursor:pointer}
+.opt:hover{border-color:#475569}
+.opt input{appearance:none;width:1.1em;height:1.1em;border:2px solid var(--muted);border-radius:50%;margin-top:2px}
+.opt input:checked{border-color:#e5e7eb;background:#e5e7eb;box-shadow:inset 0 0 0 3px var(--card)}
+input[type=radio]{position:relative;top:2px}
+.opt span{line-height:1.35;display:block;border-radius:8px}
+input.correct:checked~span{background:var(--okbg);color:var(--ok)}
+input.wrong:checked~span{background:var(--badbg);color:var(--bad)}
+.feedback{display:none;margin-top:10px;font-weight:600}
+.question:has(input.correct:checked) .feedback.ok{display:block;color:var(--ok)}
+.question:has(input.wrong:checked) .feedback.no{display:block;color:var(--bad)}
+.explain{display:none;margin-top:8px;padding:10px 12px;border-radius:10px;border:1px dashed var(--border);background:#0f172a;font-size:14px}
+.question:has(input[type=radio]:checked) .explain{display:block}
+.correct-mark{display:none;font-size:12px;color:var(--ok);margin-left:8px}
+.question:has(input[type=radio]:checked) .correct-mark{display:inline}
+.question:has(input[type=radio]:checked) .correct-outline{outline:2px solid var(--ok);outline-offset:2px;border-color:var(--ok)}
+.question:has(input[type=radio]:checked) .options .opt{pointer-events:none}
+.question:has(input[type=radio]:checked) .options .opt input{pointer-events:none}
+small.tag{font-size:12px;color:var(--muted)}
+.muted{color:var(--muted);font-size:14px;margin-top:8px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>CompTIA Tech+ Practice</h1>
+  <div class="controls">
+    <div class="block">
+      <label>Mode</label>
+      <select id="mode">
+        <option value="section" selected>Practice</option>
+        <option value="exam">Exam</option>
+      </select>
+    </div>
+    <div class="block" id="sectionWrap">
+      <label>Section</label>
+      <select id="section">
+        <option value="s1">1</option><option value="s2">2</option>
+        <option value="s3">3</option><option value="s4">4</option>
+        <option value="s5">5</option><option value="s6">6</option>
+        <option value="s7">7</option><option value="s8">8</option>
+        <option value="s9">9</option><option value="s10">10</option>
+        <option value="s11">11</option><option value="s12">12</option>
+      </select>
+    </div>
+      <div class="block" id="countWrap">
+        <label>Questions</label>
+        <select id="qcount">
+          <option>5</option>
+          <option selected>10</option>
+          <option>20</option>
+          <option>40</option>
+          <option>80</option>
+        </select>
+      </div>
+    <button id="newset" class="btn">New Set</button>
+  </div>
+  <div id="quiz"></div>
+</div>
+<script>
+const SECTIONS=["s1","s2","s3","s4","s5","s6","s7","s8","s9","s10","s11","s12"];
+function pathFor(section, isExam){
+  return `data/${section}_${isExam ? "exam" : "practice"}.json`;
+}
+const SECTION_COUNT = 10;
+const EXAM_COUNT = 75;
+const quizEl=document.getElementById("quiz"),
+      modeEl=document.getElementById("mode"),
+      secEl=document.getElementById("section"),
+      secWrap=document.getElementById("sectionWrap"),
+      countWrap=document.getElementById("countWrap"),
+      countEl=document.getElementById("qcount"),
+      btn=document.getElementById("newset");
+modeEl.addEventListener("change",()=>{
+  const isSection = modeEl.value==="section";
+  secWrap.style.display = isSection ? "inline-flex" : "none";
+  countWrap.style.display = isSection ? "inline-flex" : "none";
+});
+btn.addEventListener("click",build)
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+async function loadOne(section, isExam){
+  const r = await fetch(pathFor(section, isExam), {cache:"no-store"});
+  if(!r.ok) throw new Error(`Failed to load ${pathFor(section, isExam)}: ${r.status}`);
+  return r.json();
+}
+async function loadMany(sections, isExam){
+  const all = await Promise.all(sections.map(s => loadOne(s, isExam)));
+  return all.flat();
+}
+function pick(bank,n){return shuffle(bank.slice()).slice(0,Math.min(n,bank.length))}
+function render(set){
+  quizEl.innerHTML=""
+  set.forEach((item,idx)=>{
+    const idxs=[0,1,2,3], order=shuffle(idxs.slice()), correctPos=order.indexOf(item.answer)
+    const sec=document.createElement("section");sec.className="question"
+    const t=document.createElement("div");t.className="qtitle";t.textContent=(idx+1)+") "+item.q;sec.appendChild(t)
+    const opts=document.createElement("div");opts.className="options"
+    order.forEach((choiceIdx,pos)=>{
+      const id="q"+idx+"o"+pos
+      const lab=document.createElement("label");lab.className="opt"+(pos===correctPos?" correct-outline":"")
+      const inp=document.createElement("input");inp.type="radio";inp.name="q"+idx;inp.id=id;inp.className=pos===correctPos?"correct":"wrong"
+      const span=document.createElement("span");span.innerHTML=String.fromCharCode(65+pos)+". "+item.choices[choiceIdx]+(pos===correctPos?' <small class="correct-mark">✓ correct</small>':"")
+      lab.appendChild(inp);lab.appendChild(span);opts.appendChild(lab)
+    })
+    sec.appendChild(opts)
+    const ok=document.createElement("div");ok.className="feedback ok";ok.textContent="Correct."
+    const no=document.createElement("div");no.className="feedback no";no.textContent="Incorrect."
+    const ex=document.createElement("div");ex.className="explain";ex.textContent="Answer: "+String.fromCharCode(65+correctPos)+" — "+item.explain
+    sec.appendChild(ok);sec.appendChild(no);sec.appendChild(ex)
+    quizEl.appendChild(sec)
+  })
+}
+async function build(){
+  const isPractice = (modeEl.value==="section");
+  const n = isPractice ? parseInt(countEl.value,10) : EXAM_COUNT;
+  quizEl.innerHTML = "";
+  try{
+    if(isPractice){
+      const section = secEl.value;
+      const bank = await loadOne(section, false); // practice bank for selected section
+      render(pick(bank, n));
+    }else{
+      const bank = await loadMany(SECTIONS, true); // combine all exam banks
+      render(pick(bank, n));
+    }
+  }catch(err){
+    const e = document.createElement("pre");
+    e.style.color = "#ef4444";
+    e.textContent = String(err);
+    quizEl.appendChild(e);
+  }
+}
+build()
+</script>
+</body>
+</html>

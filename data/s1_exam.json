@@ -1,0 +1,122 @@
+[
+  {
+    "q": "During POST, which issue is the BIOS/UEFI most likely to detect first?",
+    "choices": ["Corrupt file system on the OS drive", "Incorrect front-panel LED polarity", "Unseated RAM module", "Outdated GPU driver"],
+    "answer": 2,
+    "explain": "POST validates core hardware like CPU, RAM, and basic buses before OS load."
+  },
+  {
+    "q": "A user upgrades to an NVMe M.2 SSD but sees SATA-like speeds. Most likely cause?",
+    "choices": ["Drive capacity is too small", "Installed in M.2 slot wired for SATA mode", "Needs a 24-pin converter", "Cache is L1 not L3"],
+    "answer": 1,
+    "explain": "Some M.2 slots are SATA-wired; NVMe requires PCIe-wired M.2."
+  },
+  {
+    "q": "Which scenario best justifies a higher-wattage PSU?",
+    "choices": ["More USB keyboards", "Adding a PCIe ×16 GPU with auxiliary power", "Switching from HDD to SSD", "Replacing Mini-ITX with microATX"],
+    "answer": 1,
+    "explain": "Discrete GPUs significantly increase 12V rail demand."
+  },
+  {
+    "q": "A board lists PCIe ×16 (electrical ×8). What does this mean?",
+    "choices": ["Physically ×8, runs ×16", "Physically ×16 slot but only 8 lanes wired", "Cannot accept a ×16 card", "Uses PCI not PCIe"],
+    "answer": 1,
+    "explain": "Mechanical length ×16, but the slot is electrically ×8."
+  },
+  {
+    "q": "You replace the CMOS battery. Which symptom most directly improves?",
+    "choices": ["Blue screens under load", "Time/date resets after power off", "High GPU temps", "Slow NVMe throughput"],
+    "answer": 1,
+    "explain": "The RTC and non-volatile settings persist with a good CMOS battery."
+  },
+  {
+    "q": "Which best explains why DDR5 DIMMs cannot be installed in DDR4 slots?",
+    "choices": ["Voltage is identical", "Module notch and signaling differ", "Heat spreaders are too tall", "ECC requirement only"],
+    "answer": 1,
+    "explain": "Keying and electrical specs are different by design."
+  },
+  {
+    "q": "A laptop’s CPU is described as BGA. Practical implication?",
+    "choices": ["Socketed and upgradable", "Requires ZIF lever", "Soldered and not user-replaceable", "Needs ATX 24-pin power"],
+    "answer": 2,
+    "explain": "BGA chips are soldered to the board in mobile designs."
+  },
+  {
+    "q": "Most likely cause of no display after adding a second RAM stick on a desktop:",
+    "choices": ["Wrong DIMM slots for dual-channel population", "SSD not initialized", "SATA cable reversed", "UEFI Secure Boot off"],
+    "answer": 0,
+    "explain": "Boards require specific channel slot order; check the manual."
+  },
+  {
+    "q": "Which statement about integrated graphics is accurate?",
+    "choices": ["Always faster than dedicated GPUs", "Shares system RAM and is adequate for light tasks", "Requires PCIe auxiliary power", "Only available on add-in cards"],
+    "answer": 1,
+    "explain": "iGPUs borrow system memory; fine for everyday workloads."
+  },
+  {
+    "q": "A user reports spontaneous shutdowns under GPU load. First hardware check?",
+    "choices": ["CMOS battery voltage", "PSU 12V capacity and PCIe power leads", "SATA cable seating", "UEFI fast boot setting"],
+    "answer": 1,
+    "explain": "Insufficient or unstable 12V rails under load cause power faults."
+  },
+  {
+    "q": "Why did serial interconnects (USB/PCIe/SATA) supersede legacy parallel buses?",
+    "choices": ["Lower pin counts and higher scalable speeds", "Cheaper fans", "Better optical drives", "More motherboard LEDs"],
+    "answer": 0,
+    "explain": "Serial links scale bandwidth per lane and avoid skew issues."
+  },
+  {
+    "q": "What risk does an incorrect 115/230 V PSU switch setting present?",
+    "choices": ["Drive encryption loss", "Permanent hardware damage", "Slower POST", "Lower RAM timings"],
+    "answer": 1,
+    "explain": "Mains mismatch can over- or under-voltage the PSU and components."
+  },
+  {
+    "q": "Which is the best match for a high-end GPU?",
+    "choices": ["PCIe ×1 slot", "PCIe ×4 slot", "PCIe ×16 slot", "Legacy PCI slot"],
+    "answer": 2,
+    "explain": "GPUs require the bandwidth and length of a ×16 slot."
+  },
+  {
+    "q": "A system emits a repeating beep pattern with no video on first power-on. Likely cause?",
+    "choices": ["OS missing", "Monitor off", "POST RAM failure", "Wrong desktop wallpaper"],
+    "answer": 2,
+    "explain": "Beep codes commonly indicate memory issues detected by POST."
+  },
+  {
+    "q": "Which statement about NVMe vs SATA SSDs is true?",
+    "choices": ["NVMe uses PCIe and is typically much faster", "SATA is always faster", "Both use the same protocol", "NVMe requires optical media"],
+    "answer": 0,
+    "explain": "NVMe drives access PCIe lanes directly for higher throughput."
+  },
+  {
+    "q": "Which front-panel lead does not affect boot but affects indicators?",
+    "choices": ["PWR_SW", "RESET_SW", "HDD_LED polarity", "24-pin ATX"],
+    "answer": 2,
+    "explain": "LED polarity matters for the light, not for system power-up."
+  },
+  {
+    "q": "You need maximum internal expansion cards. Best form-factor starting point?",
+    "choices": ["Mini-ITX", "ATX", "Nano-ITX", "Mobile-ITX"],
+    "answer": 1,
+    "explain": "ATX cases/boards provide more slots and headers."
+  },
+  {
+    "q": "Which situation most benefits from adding more RAM rather than a faster CPU?",
+    "choices": ["GPU-bound gaming", "Tasks thrashing virtual memory", "Purely single-thread code at 100% CPU", "PSU fan noise"],
+    "answer": 1,
+    "explain": "If swapping is heavy, more RAM reduces paging and improves performance."
+  },
+  {
+    "q": "Which connector powers a 3.5\" SATA HDD?",
+    "choices": ["PCIe 8-pin", "CPU 8-pin EPS", "SATA 15-pin power", "USB-C front header"],
+    "answer": 2,
+    "explain": "SATA power provides 3.3V, 5V, and 12V rails."
+  },
+  {
+    "q": "Safest statement about flashing UEFI firmware:",
+    "choices": ["Use any similar board’s image", "Interrupt power to speed it up", "Follow vendor instructions with the exact image", "Always done from Windows only"],
+    "answer": 2,
+    "explain": "Wrong image or interrupted flash can brick the motherboard."
+  }
+]
