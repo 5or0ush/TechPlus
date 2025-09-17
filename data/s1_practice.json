@@ -1,260 +1,104 @@
 [
-  {
-    "q": "Which component acts as the central hub that connects and coordinates all parts of a PC?",
-    "choices": ["Power supply", "Motherboard", "CPU", "RAM"],
-    "answer": 1,
-    "explain": "The motherboard interconnects CPU, memory, storage, expansion, and I/O."
-  },
-  {
-    "q": "Which ATX main power connector is standard on modern desktops?",
-    "choices": ["14-pin", "20-pin", "24-pin", "8-pin"],
-    "answer": 2,
-    "explain": "Modern ATX boards use a 24-pin main power connector."
-  },
-  {
-    "q": "Which motherboard form factor measures 12 × 9.6 inches (305 × 244 mm)?",
-    "choices": ["microATX", "ATX", "Mini-ITX", "Nano-ITX"],
-    "answer": 1,
-    "explain": "Standard ATX is 12 × 9.6 inches."
-  },
-  {
-    "q": "Which small form factor board is 6.7 × 6.7 inches?",
-    "choices": ["Mini-ITX", "microATX", "Nano-ITX", "Pico-ITX"],
-    "answer": 0,
-    "explain": "Mini-ITX is 170 × 170 mm (6.7 × 6.7 in)."
-  },
-  {
-    "q": "Which chipset role historically linked CPU to RAM and integrated graphics at high speed?",
-    "choices": ["Southbridge", "PCH", "Northbridge", "Super I/O"],
-    "answer": 2,
-    "explain": "Northbridge handled the memory controller and high-speed links."
-  },
-  {
-    "q": "Modern PCs typically combine legacy Northbridge/Southbridge functions into what?",
-    "choices": ["UEFI", "Platform Controller Hub (PCH)", "DIMM", "VRM"],
-    "answer": 1,
-    "explain": "A single PCH or CPU-integrated logic replaces the split design."
-  },
-  {
-    "q": "A bus that sends data one bit at a time is called:",
-    "choices": ["Parallel", "Serial", "Duplex", "Aggregate"],
-    "answer": 1,
-    "explain": "Serial buses transmit one bit per lane but at very high speeds."
-  },
-  {
-    "q": "Which interface superseded PATA for internal drives?",
-    "choices": ["SCSI", "SAS", "SATA", "IDE"],
-    "answer": 2,
-    "explain": "Serial ATA (SATA) replaced the older parallel ATA/IDE."
-  },
-  {
-    "q": "PCIe slot sizes are denoted by lanes. Which is the common graphics slot?",
-    "choices": ["×1", "×4", "×8", "×16"],
-    "answer": 3,
-    "explain": "Discrete GPUs typically use PCIe ×16."
-  },
-  {
-    "q": "PCIe is backward compatible across versions. Installing a 2.0 card in a 5.0 slot will:",
-    "choices": ["Not work", "Run at PCIe 2.0 speed", "Damage the slot", "Throttle CPU speed"],
-    "answer": 1,
-    "explain": "It negotiates the highest mutually supported version."
-  },
-  {
-    "q": "Which describes LGA CPU sockets?",
-    "choices": ["Pins on CPU, holes in socket", "Pins in socket, pads on CPU", "Soldered balls on CPU only", "Zero insertion with pins on CPU"],
-    "answer": 1,
-    "explain": "LGA has pins in the socket and lands on the CPU."
-  },
-  {
-    "q": "Which socket type permanently solders a CPU to the board, common in ultrathin devices?",
-    "choices": ["PGA", "LGA", "BGA", "ZIF"],
-    "answer": 2,
-    "explain": "BGA uses solder balls for permanent attachment."
-  },
-  {
-    "q": "RAM used in laptops typically comes as:",
-    "choices": ["UDIMM", "SODIMM", "RIMM", "CFast"],
-    "answer": 1,
-    "explain": "Laptops use smaller SODIMMs to save space."
-  },
-  {
-    "q": "RAM is considered:",
-    "choices": ["Non-volatile primary storage", "Volatile working memory", "Optical long-term storage", "Firmware storage"],
-    "answer": 1,
-    "explain": "RAM is volatile and holds active code/data."
-  },
-  {
-    "q": "Which RAM generations are not cross-compatible due to different key notches?",
-    "choices": ["DDR3 vs DDR4 vs DDR5", "DDR vs GDDR", "SRAM vs DRAM", "NVMe vs SATA"],
-    "answer": 0,
-    "explain": "Each DDR generation has unique notch placement and signaling."
-  },
-  {
-    "q": "Which cache level is smallest and fastest, per core?",
-    "choices": ["L3", "L2", "L1", "RAM"],
-    "answer": 2,
-    "explain": "L1 cache is closest to the execution units and fastest."
-  },
-  {
-    "q": "Virtual memory uses what to extend RAM capacity?",
-    "choices": ["GPU VRAM", "Swap/paging file on disk", "UEFI NVRAM", "Optical cache"],
-    "answer": 1,
-    "explain": "Least-recently-used pages are swapped to disk."
-  },
-  {
-    "q": "Which storage is non-volatile and has no moving parts?",
-    "choices": ["HDD", "SSD", "Tape", "Optical"],
-    "answer": 1,
-    "explain": "SSDs are solid-state flash storage."
-  },
-  {
-    "q": "NVMe is:",
-    "choices": ["A physical connector", "A protocol over PCIe", "A file system", "An optical format"],
-    "answer": 1,
-    "explain": "NVMe is a storage protocol leveraging PCIe lanes."
-  },
-  {
-    "q": "M.2 describes:",
-    "choices": ["A drive protocol", "A cable", "A form factor for modules", "An optical disc size"],
-    "answer": 2,
-    "explain": "M.2 is the physical form factor; modules may speak NVMe or SATA."
-  },
-  {
-    "q": "Typical HDD performance depends primarily on:",
-    "choices": ["Cache L1 size", "GPU shaders", "Platter RPM and seek time", "Optical laser speed"],
-    "answer": 2,
-    "explain": "Higher RPM reduces latency; seek time affects access."
-  },
-  {
-    "q": "Which optical medium has the largest common capacity?",
-    "choices": ["CD", "DVD (dual-layer)", "Blu-ray (dual-layer)", "Zip disk"],
-    "answer": 2,
-    "explain": "Dual-layer Blu-ray ≈ 50 GB."
-  },
-  {
-    "q": "Which unit is larger?",
-    "choices": ["1 GB", "1 TB", "1 MB", "1 KB"],
-    "answer": 1,
-    "explain": "TB > GB > MB > KB."
-  },
-  {
-    "q": "GHz refers to:",
-    "choices": ["Billions of cycles/sec", "Millions of cycles/sec", "Bytes/sec", "Watts/sec"],
-    "answer": 0,
-    "explain": "GHz = 10^9 cycles per second."
-  },
-  {
-    "q": "The PSU’s job is to:",
-    "choices": ["Control CPU clocks", "Convert AC to DC rails", "Store BIOS settings", "Provide GPU drivers"],
-    "answer": 1,
-    "explain": "It supplies regulated DC voltages (e.g., 12V, 5V, 3.3V)."
-  },
-  {
-    "q": "Which rear switch on many PSUs must match regional mains?",
-    "choices": ["80+ mode", "Eco fan mode", "115/230 V selector", "SATA/PCIe switch"],
-    "answer": 2,
-    "explain": "Incorrect voltage selection can damage hardware."
-  },
-  {
-    "q": "Why is opening a PSU dangerous?",
-    "choices": ["Magnets erase data", "Capacitors can hold lethal charge", "Radiation risk", "It voids GPU warranty"],
-    "answer": 1,
-    "explain": "Large capacitors retain charge even unplugged."
-  },
-  {
-    "q": "Air cooling typically uses:",
-    "choices": ["Peltier plates only", "Fans and heat sinks", "Liquid nitrogen", "Phase-change by default"],
-    "answer": 1,
-    "explain": "Fans move air; heat sinks increase surface area."
-  },
-  {
-    "q": "Liquid cooling advantage vs air is often:",
-    "choices": ["No maintenance ever", "Lower complexity", "Higher efficiency and lower noise under load", "No risk of leaks"],
-    "answer": 2,
-    "explain": "Radiators can dissipate heat efficiently with less noise."
-  },
-  {
-    "q": "BIOS/UEFI first runs which diagnostic at power-on?",
-    "choices": ["CHKDSK", "POST", "SMART long test", "Memtest86"],
-    "answer": 1,
-    "explain": "POST checks hardware and initializes devices."
-  },
-  {
-    "q": "If the system forgets time/date after shutdown, likely cause is:",
-    "choices": ["Dead CMOS battery", "Faulty PSU fan", "Bad GPU VRAM", "Corrupt file system"],
-    "answer": 0,
-    "explain": "CMOS battery maintains RTC and settings when off."
-  },
-  {
-    "q": "Flashing the BIOS requires:",
-    "choices": ["Random firmware file", "Exact vendor firmware and procedure", "Any UEFI shell command", "Changing PSU switch to 230 V"],
-    "answer": 1,
-    "explain": "Use the correct image and steps to avoid bricking."
-  },
-  {
-    "q": "Front-panel case connectors usually include:",
-    "choices": ["PCIe ×16 slot", "DRAM channels", "Power switch, LEDs, audio, USB", "SATA power rail"],
-    "answer": 2,
-    "explain": "Headers route case buttons/ports to the motherboard."
-  },
-  {
-    "q": "A field-replaceable unit (FRU) is:",
-    "choices": ["A soldered BGA chip", "A serviceable modular component", "Only a battery", "Only a GPU"],
-    "answer": 1,
-    "explain": "FRUs are designed for quick replacement (e.g., HDD, PSU)."
-  },
-  {
-    "q": "Smaller devices like smartphones tend to be:",
-    "choices": ["More modular", "Socketed for everything", "Less modular and more integrated", "User-serviceable by default"],
-    "answer": 2,
-    "explain": "Integration increases; many parts are not field-replaceable."
-  },
-  {
-    "q": "A NIC provides:",
-    "choices": ["Sound output", "Network connectivity", "Disk encryption", "BIOS updates"],
-    "answer": 1,
-    "explain": "NICs enable wired or wireless networking."
-  },
-  {
-    "q": "Integrated graphics typically:",
-    "choices": ["Use dedicated GDDR6 VRAM", "Are on a PCIe add-in card", "Share system RAM", "Require dual PSUs"],
-    "answer": 2,
-    "explain": "Integrated GPUs borrow main memory."
-  },
-  {
-    "q": "Which connector powers SATA drives?",
-    "choices": ["4-pin Molex only", "6/8-pin PCIe", "SATA power connector", "24-pin ATX"],
-    "answer": 2,
-    "explain": "SATA drives use the 15-pin SATA power plug."
-  },
-  {
-    "q": "Which statement about PCI vs PCIe is correct?",
-    "choices": ["PCIe is serial and faster; PCI is legacy parallel", "PCIe is parallel; PCI is serial", "Both are parallel", "Both are serial"],
-    "answer": 0,
-    "explain": "PCIe uses high-speed serial lanes; PCI was parallel."
-  },
-  {
-    "q": "POST beep codes usually indicate:",
-    "choices": ["File system errors", "Hardware initialization issues", "Network outages", "Driver conflicts only"],
-    "answer": 1,
-    "explain": "They signal hardware faults found during POST."
-  },
-  {
-    "q": "A 3.5 inch desktop HDD typically connects via:",
-    "choices": ["NVMe over M.2 only", "SATA data + SATA power", "USB-C internally", "Thunderbolt internally"],
-    "answer": 1,
-    "explain": "Use SATA data cable and SATA power from PSU."
-  },
-  {
-    "q": "Which statement about memory is true?",
-    "choices": ["ROM is volatile", "RAM is non-volatile", "SRAM flash drives are non-volatile storage", "DRAM retains data without power"],
-    "answer": 2,
-    "explain": "Flash (a form of non-volatile memory) holds data without power."
-  },
-  {
-    "q": "Form factor choice impacts:",
-    "choices": ["CPU instruction set only", "Case fit, power connectors, expansion capacity", "Operating system features", "Network bandwidth only"],
-    "answer": 1,
-    "explain": "Different boards require compatible cases/PSUs and offer different slots."
-  }
+  {"q":"Which four functions define basic computing?","choices":["Process, compile, emulate, store","Input, processing, output, storage","Boot, login, execute, shutdown","Cache, swap, page, flush"],"answer":1,"explain":"Computers accept input, process it, produce output, and store data."},
+  {"q":"Which is an example of input?","choices":["Monitor","Keyboard","Printer","Speaker"],"answer":1,"explain":"Keyboards provide input to the system."},
+  {"q":"Which is an example of output?","choices":["Mouse","Touchscreen press","Display image on monitor","Microphone"],"answer":2,"explain":"Monitors provide visual output."},
+  {"q":"Which storage type is volatile?","choices":["HDD","SSD","RAM","Optical disc"],"answer":2,"explain":"RAM loses contents when power is removed."},
+  {"q":"Order units from smallest to largest","choices":["Byte < bit < KB < MB","bit < Byte < KB < MB","KB < bit < Byte < MB","bit < KB < Byte < MB"],"answer":1,"explain":"bit → Byte (8 bits) → KB → MB → GB → TB → PB."},
+  {"q":"1 KB is approximately:","choices":["100 bytes","1,000 bytes","10,000 bytes","1,000,000 bytes"],"answer":1,"explain":"In SI context used by storage vendors, 1 KB ≈ 1,000 bytes."},
+  {"q":"1 GHz equals:","choices":["1,000 cycles/sec","1 million cycles/sec","1 billion cycles/sec","1 trillion cycles/sec"],"answer":2,"explain":"GHz measures billions of cycles per second."},
+  {"q":"Which component connects and coordinates all parts of a PC?","choices":["CPU","Motherboard","PSU","Case"],"answer":1,"explain":"The motherboard interconnects CPU, memory, storage, and I/O."},
+  {"q":"ATX motherboard size is approximately:","choices":["9.6 × 9.6 in","12 × 9.6 in","6.7 × 6.7 in","4.7 × 4.7 in"],"answer":1,"explain":"Standard ATX is 12 × 9.6 inches (305 × 244 mm)."},
+  {"q":"Mini-ITX size is:","choices":["9.6 × 9.6 in","6.7 × 6.7 in","3.9 × 2.8 in","12 × 9.6 in"],"answer":1,"explain":"Mini-ITX boards are 170 × 170 mm (6.7 × 6.7 in)."},
+  {"q":"Smaller motherboards tend to have:","choices":["More expansion slots","Higher PSU wattage","More integrated components","Socketed CPUs always"],"answer":2,"explain":"Space limits slots; many features are integrated."},
+  {"q":"Historically, the chipset part that linked CPU to RAM and high-speed devices:","choices":["Southbridge","PCH","Northbridge","Super I/O"],"answer":2,"explain":"Northbridge handled the memory controller and high-speed links."},
+  {"q":"Modern boards replace north/southbridge with:","choices":["PCH or CPU-integrated logic","AGP hub","CFast module","CMOS battery"],"answer":0,"explain":"Platform Controller Hub and CPU integration handle functions."},
+  {"q":"A bus that sends data one bit at a time is:","choices":["Parallel","Serial","Half-duplex parallel","Tri-state"],"answer":1,"explain":"Serial buses transmit one bit per lane at high speed."},
+  {"q":"Which interface superseded PATA for internal drives?","choices":["IDE","SCSI","SATA","FireWire"],"answer":2,"explain":"Serial ATA replaced the older parallel ATA/IDE standard."},
+  {"q":"Common graphics expansion slot today:","choices":["PCI ×1","PCIe ×16","AGP 8x","ISA"],"answer":1,"explain":"Discrete GPUs typically use PCIe ×16."},
+  {"q":"PCIe backward compatibility means a PCIe 2.0 card in a 5.0 slot will:","choices":["Not work","Run at 5.0 speed","Run at 2.0 speed","Damage the slot"],"answer":2,"explain":"Negotiates to the highest common version."},
+  {"q":"LGA sockets have:","choices":["Pins on CPU","Pins in socket and pads on CPU","Ball grid on CPU only","Zero pins anywhere"],"answer":1,"explain":"LGA places pins in the socket; CPU has flat lands."},
+  {"q":"BGA implies a CPU is:","choices":["User-replaceable","Socketed with lever","Permanently soldered","On a PCIe card"],"answer":2,"explain":"BGA uses solder balls; not field-replaceable."},
+  {"q":"Laptop memory modules are usually:","choices":["UDIMM","SODIMM","RIMM","CFast"],"answer":1,"explain":"SODIMMs save space in laptops."},
+  {"q":"RAM is:","choices":["Non-volatile primary storage","Volatile working memory","Optical storage","Firmware memory"],"answer":1,"explain":"RAM holds active code/data and is volatile."},
+  {"q":"DDR3, DDR4, DDR5 are not cross-compatible because:","choices":["Same notch location","Different notch and signaling","Same voltage","Same timing"],"answer":1,"explain":"Each generation has unique keying and electrical specs."},
+  {"q":"Fastest, smallest on-CPU cache level:","choices":["L3","L2","L1","RAM"],"answer":2,"explain":"L1 is closest to execution units and fastest."},
+  {"q":"Virtual memory extends RAM by using:","choices":["GPU VRAM","Swap/paging on disk","Optical cache","UEFI NVRAM"],"answer":1,"explain":"Least-used pages are swapped to disk."},
+  {"q":"Which storage has no moving parts and is non-volatile?","choices":["HDD","SSD","Tape","Optical"],"answer":1,"explain":"SSDs use flash memory."},
+  {"q":"NVMe is:","choices":["A connector","A storage protocol over PCIe","A file system","An optical format"],"answer":1,"explain":"NVMe leverages PCIe for low-latency storage."},
+  {"q":"M.2 refers to:","choices":["Protocol","Cable","Form factor for modules","GPU family"],"answer":2,"explain":"M.2 is a physical form factor; may carry NVMe or SATA."},
+  {"q":"HDD performance mainly depends on:","choices":["GPU speed","Platter RPM and seek time","Monitor refresh","Optical laser power"],"answer":1,"explain":"Higher RPM and lower seek time improve access."},
+  {"q":"Largest common optical capacity here:","choices":["CD","DVD dual-layer","Blu-ray dual-layer","Zip disk"],"answer":2,"explain":"Dual-layer BD ≈ 50 GB."},
+  {"q":"Which is larger?","choices":["1 GB","1 TB","1 MB","1 KB"],"answer":1,"explain":"TB > GB > MB > KB."},
+  {"q":"GHz measures:","choices":["Cycles per second","Bytes per second","Watts per second","Frames per second"],"answer":0,"explain":"Processor clock frequency."},
+  {"q":"PSU converts:","choices":["DC to AC","AC to DC rails","DC to DC only","AC to AC only"],"answer":1,"explain":"Supplies regulated DC (12V, 5V, 3.3V)."},
+  {"q":"Modern ATX main power connector:","choices":["14-pin","20-pin","24-pin","10-pin"],"answer":2,"explain":"24-pin is standard on modern ATX."},
+  {"q":"Rear PSU switch that must match regional mains:","choices":["80+ mode","Eco fan","115/230 V selector","SATA/PCIe select"],"answer":2,"explain":"Incorrect selection can damage components."},
+  {"q":"Why is opening a PSU dangerous?","choices":["Magnets wipe disks","Capacitors retain lethal charge","X-ray emission","High RF output"],"answer":1,"explain":"Capacitors can hold charge after unplugging."},
+  {"q":"Typical air cooling uses:","choices":["LN2 only","Fans and heat sinks","Phase change only","No airflow"],"answer":1,"explain":"Fans move air over heat sinks."},
+  {"q":"Liquid cooling advantage vs air:","choices":["No maintenance ever","Lower complexity","Efficient heat dissipation, quieter under load","Zero leak risk"],"answer":2,"explain":"Radiators can dissipate more heat efficiently."},
+  {"q":"Firmware that initializes hardware at boot:","choices":["OS kernel","Driver pack","BIOS/UEFI","Bootloader only"],"answer":2,"explain":"Firmware runs POST and starts boot process."},
+  {"q":"POST occurs:","choices":["After OS loads","During firmware initialization at power-on","Only in Safe Mode","Only on laptops"],"answer":1,"explain":"Power-On Self-Test runs before OS."},
+  {"q":"System forgets time/date after shutdown. Likely cause:","choices":["Bad GPU","Dead CMOS battery","Corrupt OS","Low RAM"],"answer":1,"explain":"CMOS battery maintains RTC and settings."},
+  {"q":"Safe method to update motherboard firmware:","choices":["Random file","Exact vendor firmware and procedure","Any UEFI file","Flip PSU to 230 V"],"answer":1,"explain":"Use vendor image and steps to avoid bricking."},
+  {"q":"Front-panel connectors include:","choices":["PCIe slot","DRAM channels","Power/reset switches, LEDs, audio, USB","SATA power rail"],"answer":2,"explain":"Case headers route buttons/ports to the board."},
+  {"q":"Field-replaceable unit (FRU):","choices":["Soldered BGA chip","Modular component designed for quick replacement","Only batteries","Only GPUs"],"answer":1,"explain":"Examples: HDDs, PSUs, fans."},
+  {"q":"Integrated graphics typically:","choices":["Use dedicated GDDR6","Are on a PCIe add-in card","Share system RAM","Require dual PSUs"],"answer":2,"explain":"iGPUs borrow main memory."},
+  {"q":"SATA drives use which power connector?","choices":["4-pin Molex only","6/8-pin PCIe","15-pin SATA power","24-pin ATX"],"answer":2,"explain":"SATA devices use 15-pin power."},
+  {"q":"PCI vs PCIe correct statement:","choices":["Both parallel","PCIe is serial and faster; PCI is legacy parallel","PCI is serial; PCIe is parallel","Both serial"],"answer":1,"explain":"PCIe uses high-speed serial lanes."},
+  {"q":"POST beep codes indicate:","choices":["File system errors only","Hardware initialization issues","Network outages","Driver updates"],"answer":1,"explain":"Beep patterns help locate faulty hardware."},
+  {"q":"3.5\" desktop HDD internal connections:","choices":["NVMe over M.2","SATA data + SATA power","USB-C internal","Thunderbolt internal"],"answer":1,"explain":"Use SATA data cable and SATA power."},
+  {"q":"ROM is:","choices":["Volatile","Non-volatile; contents persistent","Same as RAM","Only on GPUs"],"answer":1,"explain":"Firmware ROM retains data without power."},
+  {"q":"RAM vs ROM correct contrast:","choices":["RAM non-volatile; ROM volatile","Both volatile","RAM volatile working memory; ROM non-volatile firmware","Both non-volatile"],"answer":2,"explain":"RAM loses data without power; ROM does not."},
+  {"q":"GPU purpose:","choices":["Network routing","Audio synthesis","Render graphics and parallel compute","Disk encryption only"],"answer":2,"explain":"GPUs accelerate graphics and some compute workloads."},
+  {"q":"NIC provides:","choices":["Audio output","Network connectivity","BIOS updates","Video output"],"answer":1,"explain":"Network Interface Cards enable wired/wireless networking."},
+  {"q":"Onboard vs expansion NIC difference:","choices":["Onboard is integrated; expansion is add-in card","Onboard is always faster","Expansion never supports Wi-Fi","Onboard cannot be disabled"],"answer":0,"explain":"Onboard NIC is built-in; add-in NICs use PCIe/M.2."},
+  {"q":"USB introduced which useful feature?","choices":["Mandatory shutdown for connect","Hot-plugging devices","Parallel signaling","AGP replacement"],"answer":1,"explain":"USB supports connecting devices without powering off."},
+  {"q":"Which bus is used by modern NVMe SSDs?","choices":["SATA only","PCIe","IDE","FireWire"],"answer":1,"explain":"NVMe communicates over PCIe lanes."},
+  {"q":"Front-side bus (FSB) historically connected:","choices":["CPU and GPU","CPU and RAM","CPU and PSU","GPU and NIC"],"answer":1,"explain":"FSB linked CPU to main memory in older designs."},
+  {"q":"Which CPU architecture dominates mobile devices due to efficiency?","choices":["x86 CISC","ARM RISC","MIPS CISC","SPARC"],"answer":1,"explain":"ARM emphasizes power efficiency for mobile devices."},
+  {"q":"Multi-core CPUs improve:","choices":["Single-thread latency only","Parallel task throughput","Power draw always","ROM size"],"answer":1,"explain":"More cores increase parallelism."},
+  {"q":"Which CPU spec measures electrical cycles per second?","choices":["IPC","GHz","TDP","Cache"],"answer":1,"explain":"Clock frequency is in hertz."},
+  {"q":"Which cache level is often shared across cores?","choices":["L1","L2","L3","No cache shared"],"answer":2,"explain":"L3 is usually shared among cores."},
+  {"q":"Adding RAM typically improves performance because:","choices":["Increases CPU GHz","Reduces reliance on slow swap","Boosts PSU wattage","Raises GPU clocks"],"answer":1,"explain":"More RAM reduces paging to disk."},
+  {"q":"Which device converts AC wall power to DC rails?","choices":["Motherboard","PSU","VRM on CPU","UPS"],"answer":1,"explain":"PSU supplies DC voltages."},
+  {"q":"Which connector often powers the CPU on the motherboard?","choices":["PCIe 8-pin (GPU)","EPS 8-pin/4+4 CPU power","SATA power","Molex"],"answer":1,"explain":"CPU power uses EPS 8-pin (sometimes 4+4)."},
+  {"q":"Heatsink purpose:","choices":["Store electricity","Increase surface area to dissipate heat","Hold GPU in slot","Amplify audio"],"answer":1,"explain":"Fins spread heat for airflow to remove."},
+  {"q":"Thermal paste is used to:","choices":["Insulate CPU from heatsink","Fill microscopic gaps to improve heat transfer","Glue CPU permanently","Increase voltage"],"answer":1,"explain":"TIM improves conduction between CPU and cooler."},
+  {"q":"Case airflow best practice:","choices":["Only exhaust fans","Only intake fans","Balanced intake and exhaust for directed flow","Seal all vents"],"answer":2,"explain":"Balanced airflow removes hot air efficiently."},
+  {"q":"Which port on a GPU can carry audio with video?","choices":["DVI-D (most)","VGA","HDMI","Parallel"],"answer":2,"explain":"HDMI carries digital audio and video."},
+  {"q":"DisplayPort advantage vs HDMI in PCs:","choices":["Analog only","Royalty-free, PC focused, supports high bandwidth","No audio","Lower resolution only"],"answer":1,"explain":"DP is flexible and royalty-free."},
+  {"q":"Optical drives are:","choices":["More common in new laptops","Declining in prevalence","Required for OS install","Faster than NVMe"],"answer":1,"explain":"Thin devices often omit optical drives."},
+  {"q":"Which statement about SSD vs HDD is true?","choices":["SSDs are slower at random I/O","SSDs have no moving parts and are faster","HDDs draw less power in all cases","HDDs are immune to shock"],"answer":1,"explain":"SSDs provide fast random access and tolerate shock better."},
+  {"q":"UEFI adds features over legacy BIOS such as:","choices":["Smaller drive support only","Graphical setup, secure boot, large-drive support","No network boot","Slower startup"],"answer":1,"explain":"UEFI improves usability and capability."},
+  {"q":"To enter firmware setup during POST, typical keys are:","choices":["F2/Delete","Ctrl+C","Alt+Tab","Win+R"],"answer":0,"explain":"Vendors commonly use F2, Del, or F12."},
+  {"q":"Back-panel connectors include:","choices":["DIMM slots","PCIe ×16","USB, video, audio, Ethernet","NVMe socket"],"answer":2,"explain":"I/O shield exposes external ports."},
+  {"q":"Which measurement aligns with exam objectives for units of measure?","choices":["Pixels","Watts exclusively","MHz and GHz for processing speed","Decibels"],"answer":2,"explain":"Know MHz and GHz definitions for CPU speed."},
+  {"q":"An external flash drive is typically:","choices":["SATA-only device","USB-connected portable SSD/flash storage","PCIe add-in card","Optical media"],"answer":1,"explain":"Thumb drives connect over USB."},
+  {"q":"If RAM is installed in the wrong slot pair on a dual-channel board, result is often:","choices":["No POST always","Reduced bandwidth (single-channel)","Higher voltage","Inverted fan curves"],"answer":1,"explain":"Dual-channel requires matched slots to enable interleaving."},
+  {"q":"S.M.A.R.T. relates to:","choices":["CPU temps","Drive health monitoring","GPU overclocking","RAM ECC only"],"answer":1,"explain":"Self-Monitoring, Analysis and Reporting Technology monitors drives."},
+  {"q":"ECC memory is used to:","choices":["Increase GPU FPS","Correct single-bit memory errors","Boost CPU GHz","Replace VRM"],"answer":1,"explain":"ECC improves reliability, common in servers/workstations."},
+  {"q":"Which connector typically provides high-speed external storage and displays from laptops?","choices":["USB-A 2.0","Thunderbolt/USB-C","RJ11","PS/2"],"answer":1,"explain":"USB-C with TB/DP Alt Mode supports data, power, and video."},
+  {"q":"Beep code on boot then no display after RAM change. First step:","choices":["Replace PSU","Reseat RAM and check correct slots","Flash BIOS immediately","Reinstall OS"],"answer":1,"explain":"Improper seating is common cause."},
+  {"q":"Motherboard standoffs are important because they:","choices":["Improve Wi-Fi","Prevent shorting the board to the case","Increase FPS","Cool the CPU"],"answer":1,"explain":"They keep the PCB from touching the metal chassis."},
+  {"q":"If a PC powers on then off immediately, a common cause is:","choices":["Bad monitor","Loose EPS CPU power connector","Wrong mouse","Old HDD"],"answer":1,"explain":"CPU power not connected can cause shutdown."},
+  {"q":"Which storage connector is used by most 2.5\" SATA SSDs?","choices":["mSATA only","SATA data + SATA power","NVMe M.2 only","PCIe edge"],"answer":1,"explain":"2.5\" SATA drives use standard SATA connectors."},
+  {"q":"CMOS stores:","choices":["User documents","Boot order, time/date, basic config","GPU shaders","OS kernel"],"answer":1,"explain":"CMOS retains BIOS configuration settings."},
+  {"q":"Integrated audio jacks are commonly found:","choices":["On the PSU","On the rear I/O panel and front-panel header","Inside PCIe slot","On DIMMs"],"answer":1,"explain":"Motherboard audio codec exposes rear and front jacks."},
+  {"q":"Purpose of stiffer case airflow filters:","choices":["Decorative only","Reduce dust ingress","Increase PSU voltage","Improve NIC speed"],"answer":1,"explain":"Filters keep dust out; clean periodically."},
+  {"q":"A UPS differs from a PSU by:","choices":["Being inside the PC","Providing battery backup and surge protection externally","Supplying DC rails directly to motherboard","Cooling the CPU"],"answer":1,"explain":"UPS supplies temporary power during outages."},
+  {"q":"Which device class is least modular/user-serviceable?","choices":["Desktop PC","Rack server","Laptop","Smartphone"],"answer":3,"explain":"Smaller devices are more integrated and less serviceable."},
+  {"q":"If a SATA HDD is not detected, first simple check:","choices":["Replace CPU","Check SATA data and power cables seated","Reinstall OS","Flash GPU BIOS"],"answer":1,"explain":"Cabling is a common failure point."},
+  {"q":"Which slot length is the longest in typical consumer boards?","choices":["PCIe ×1","PCIe ×4","PCIe ×8","PCIe ×16"],"answer":3,"explain":"×16 slots are physically the longest."},
+  {"q":"A DIMM notch ensures:","choices":["Easier removal","Correct orientation and generation compatibility","Better cooling","Higher bandwidth"],"answer":1,"explain":"Keying prevents wrong-generation installs."},
+  {"q":"Which best describes a motherboard?","choices":["A power converter","A printed circuit board with sockets, slots, and traces interconnecting components","A disk controller only","A GPU board"],"answer":1,"explain":"It is a complex PCB connecting all subsystems."},
+  {"q":"Why are optical drives less common now?","choices":["Too expensive","Cloud delivery and USB install media replaced them","They damage SSDs","They are illegal"],"answer":1,"explain":"Most software is downloaded; USB boot media is easy."},
+  {"q":"Which component primarily determines maximum supported RAM speed and type?","choices":["Case","PSU","Motherboard chipset and CPU memory controller","GPU"],"answer":2,"explain":"Chipset and CPU IMC define supported memory."},
+  {"q":"Installing a PCIe card should be done with power:","choices":["On to test hot-plug","Off and PSU unplugged","On but in sleep","Off only"],"answer":1,"explain":"Always power down and disconnect AC for safety."},
+  {"q":"ESD protection during builds is mainly about:","choices":["Cooling the room","Preventing static discharge to components","Blocking Wi-Fi","Grounding the PSU fan"],"answer":1,"explain":"Use grounding and handle components by edges."},
+  {"q":"When comparing CPUs, IPC refers to:","choices":["Instructions per clock","Interrupts per core","Interfaces per chip","Inputs per controller"],"answer":0,"explain":"IPC × clock determines performance per core."},
+  {"q":"A system with 8 GB RAM and high swap usage feels slow because:","choices":["High GPU temp","Disk I/O from paging is much slower than RAM","Low PSU wattage","Wrong BIOS key"],"answer":1,"explain":"Paging causes latency; adding RAM helps."},
+  {"q":"Which connector on front panel is polarity-sensitive for proper LED function?","choices":["Power switch","Reset switch","HDD LED","Speaker header only"],"answer":2,"explain":"LEDs require correct polarity to light."},
+  {"q":"What does the I/O shield do?","choices":["Holds GPU","Provides rear port openings and EMI shielding","Cools CPU","Supplies SATA power"],"answer":1,"explain":"I/O shield aligns ports and helps EMI control."},
+  {"q":"A triple-fan GPU in a compact ITX case likely causes:","choices":["Better airflow","Clearance and thermal issues","Lower noise always","No effect"],"answer":1,"explain":"Ensure case length and airflow suitability."},
+  {"q":"If a system powers but no display and no beeps, first minimal config test is:","choices":["Install more drives","Breadboard with CPU, one RAM stick, onboard video","Flash BIOS blindly","Swap case"],"answer":1,"explain":"Minimal config helps isolate faulty components."}
 ]
