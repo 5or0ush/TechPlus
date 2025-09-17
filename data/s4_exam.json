@@ -1,0 +1,17 @@
+[
+  {"q":"The kernel in an OS is responsible for:","choices":["User account management","Managing CPU, memory, and devices","Providing desktop icons","Running cloud apps"],"answer":1,"explain":"The kernel is the OS core that manages hardware resources."},
+  {"q":"What advantage does a 64-bit OS provide over 32-bit?","choices":["More colors","Better cooling","Ability to address more RAM","More USB ports"],"answer":2,"explain":"64-bit supports vastly larger memory addressing."},
+  {"q":"An embedded OS is most likely found in:","choices":["Laptop","Smartwatch","Desktop","Server"],"answer":1,"explain":"Smartwatches and routers run embedded operating systems."},
+  {"q":"Which file system is default in macOS?","choices":["NTFS","APFS","EXT4","HFS"],"answer":1,"explain":"APFS is Apple’s modern file system."},
+  {"q":"Which Linux command changes file permissions?","choices":["chmod","ls","cd","mv"],"answer":0,"explain":"`chmod` modifies file permissions."},
+  {"q":"Which OS is open-source and has many distributions?","choices":["Windows","Linux","macOS","iOS"],"answer":1,"explain":"Linux is open-source with distros like Ubuntu, Fedora, Debian."},
+  {"q":"Windows Task Manager is used to:","choices":["Check IP addresses","View running processes and resource usage","Format drives","Install apps"],"answer":1,"explain":"Task Manager shows processes and performance."},
+  {"q":"Which type of OS is designed for mobile devices like smartphones?","choices":["Embedded","Server","Mobile","Desktop"],"answer":2,"explain":"Mobile OS examples include Android and iOS."},
+  {"q":"Which feature enforces user rights to files and folders?","choices":["GUI","Access control","Multithreading","Device drivers"],"answer":1,"explain":"Access control defines what users can do with resources."},
+  {"q":"Which command-line tool lists contents of a directory in Linux/macOS?","choices":["ls","dir","cat","touch"],"answer":0,"explain":"`ls` lists directory contents."},
+  {"q":"The component providing a command interpreter (CLI) is called:","choices":["Kernel","Driver","Shell","API"],"answer":2,"explain":"The shell interprets user commands."},
+  {"q":"Which OS type manages centralized authentication and resources in organizations?","choices":["Desktop","Server","Embedded","Mobile"],"answer":1,"explain":"Server OS handle domains, authentication, and resource sharing."},
+  {"q":"Which OS lab exercise in your Notion used VMware Fusion Player?","choices":["LibreOffice install","Debian Linux lab","BlueStacks emulator","Wireshark capture"],"answer":1,"explain":"Debian Linux lab runs in VMware Fusion Player."},
+  {"q":"What does BIOS/UEFI hand off to after POST completes?","choices":["Kernel","Task Manager","File Explorer","CMD"],"answer":0,"explain":"UEFI hands control to the OS kernel/bootloader."},
+  {"q":"Which file system is standard in Windows 10/11?","choices":["APFS","NTFS","EXT4","exFAT"],"answer":1,"explain":"Windows uses NTFS as its default system drive format."}
+]

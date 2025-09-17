@@ -1,0 +1,17 @@
+[
+  {"q":"Which notational system is base-2?","choices":["Decimal","Octal","Binary","Hexadecimal"],"answer":2,"explain":"Binary uses only 0 and 1."},
+  {"q":"How many values can a byte represent?","choices":["64","128","255","256"],"answer":3,"explain":"8 bits = 256 possible values (0–255)."},
+  {"q":"Which encoding is backward-compatible with ASCII?","choices":["UTF-8","UTF-32","Octal","Decimal"],"answer":0,"explain":"UTF-8 is efficient and ASCII-compatible."},
+  {"q":"Assembly code is primarily used for:","choices":["Web design","Firmware and hardware-level tasks","Databases","Word processing"],"answer":1,"explain":"Assembly controls hardware directly."},
+  {"q":"Which programming category produces standalone executables?","choices":["Interpreted","Markup","Compiled","Query"],"answer":2,"explain":"Compiled languages are translated into executables."},
+  {"q":"Which category includes HTML and XML?","choices":["Markup","Scripting","Query","Assembly"],"answer":0,"explain":"HTML and XML are markup languages."},
+  {"q":"Which category includes Python and JavaScript?","choices":["Compiled","Markup","Scripting","Query"],"answer":2,"explain":"Python and JS are scripting languages."},
+  {"q":"Which language is used to ask questions of a database?","choices":["Assembly","SQL","HTML","Python"],"answer":1,"explain":"SQL is the standard query language for databases."},
+  {"q":"What data type represents true/false values?","choices":["Char","Integer","Float","Boolean"],"answer":3,"explain":"Boolean values are true/false."},
+  {"q":"Which identifier can change its value during program execution?","choices":["Constant","Variable","Array","Class"],"answer":1,"explain":"Variables can change; constants cannot."},
+  {"q":"Which programming logic concept uses if/else?","choices":["Looping","Branching","Sequencing","Vectoring"],"answer":1,"explain":"Branching executes based on conditions."},
+  {"q":"Which logic repeats code until a condition is false?","choices":["Branching","Looping","Flowcharting","Objecting"],"answer":1,"explain":"Loops repeat while a condition holds."},
+  {"q":"What is pseudocode primarily for?","choices":["Execution","Planning logic in plain text","Machine code","Compilation"],"answer":1,"explain":"Pseudocode describes logic for humans."},
+  {"q":"Which container has fixed size and same-type elements?","choices":["Vector","Array","Object","Boolean"],"answer":1,"explain":"Arrays are fixed and uniform."},
+  {"q":"What is a class in OOP?","choices":["A loop type","A blueprint for objects","A constant value","A database query"],"answer":1,"explain":"Classes define object structure and behavior."}
+]

@@ -1,0 +1,22 @@
+[
+  {"q":"Which unit measures network throughput?","choices":["Celsius","Bits per second","Watts","Hertz"],"answer":1,"explain":"Throughput is measured in bits per second (bps)."},
+  {"q":"1 Mbps equals:","choices":["1,000 bits per second","1,000,000 bits per second","1,000 bytes per second","1,000,000 bytes per second"],"answer":1,"explain":"1 Mbps = 1,000,000 bits per second."},
+  {"q":"Which internet service uses phone lines but is much faster than dial-up?","choices":["Fiber","DSL","Cable","Satellite"],"answer":1,"explain":"Digital Subscriber Line (DSL) uses phone lines but provides broadband speeds."},
+  {"q":"A cable modem connects using which medium?","choices":["Twisted pair copper","Coaxial cable","Fiber","Wireless"],"answer":1,"explain":"Cable modems use coaxial cable, same as cable TV."},
+  {"q":"Which internet type provides the fastest speeds but limited availability?","choices":["Fiber-optic","DSL","Cable","Dial-up"],"answer":0,"explain":"Fiber offers multi-gigabit speeds but is less available."},
+  {"q":"Which wireless service often suffers from high latency due to signal distance?","choices":["Cellular","RF fixed wireless","Satellite","Wi-Fi"],"answer":2,"explain":"Satellite signals travel to orbit and back, adding latency."},
+  {"q":"What does a modem do?","choices":["Routes traffic by IP","Amplifies Wi-Fi","Converts digital to analog and back","Filters packets"],"answer":2,"explain":"Modem = modulator/demodulator for WAN links."},
+  {"q":"Which device forwards frames based on MAC addresses?","choices":["Firewall","Switch","Router","Modem"],"answer":1,"explain":"Switches use MAC tables to forward only to the target port."},
+  {"q":"Routers make forwarding decisions based on:","choices":["SSID","IP addresses","MAC addresses","Port numbers"],"answer":1,"explain":"Routers operate at the network layer using IP."},
+  {"q":"A firewall’s main purpose is to:","choices":["Boost Wi-Fi","Encrypt hard drives","Filter network traffic","Assign IP addresses"],"answer":2,"explain":"Firewalls enforce ACLs to permit or deny traffic."},
+  {"q":"Which network is confined to a small geographic area?","choices":["WAN","LAN","VPN","MAN"],"answer":1,"explain":"LANs cover homes, offices, or buildings."},
+  {"q":"Which Wi-Fi band offers better range but lower speeds?","choices":["2.4 GHz","5 GHz","6 GHz","900 MHz"],"answer":0,"explain":"2.4 GHz travels farther but is slower and noisier."},
+  {"q":"Which Wi-Fi standard introduced Wi-Fi 6 with up to 9.6 Gbps?","choices":["802.11n","802.11ac","802.11ax","802.11b"],"answer":2,"explain":"802.11ax = Wi-Fi 6/6E."},
+  {"q":"Why change a router’s default SSID and password?","choices":["Save bandwidth","Increase security","Speed up Wi-Fi","Reduce interference"],"answer":1,"explain":"Defaults are public knowledge; change them."},
+  {"q":"Strongest Wi-Fi security today:","choices":["WEP","WPA","WPA2","WPA3"],"answer":3,"explain":"WPA3 with SAE hardens against guessing attacks."},
+  {"q":"Which service translates domain names into IP addresses?","choices":["DHCP","DNS","SMTP","FTP"],"answer":1,"explain":"DNS maps names to IPs."},
+  {"q":"Which protocol automatically assigns IP info to hosts?","choices":["DNS","DHCP","SMTP","IMAP"],"answer":1,"explain":"DHCP leases IP, mask, gateway, DNS."},
+  {"q":"HTTPS uses which port?","choices":["80","25","443","21"],"answer":2,"explain":"HTTPS defaults to TCP 443."},
+  {"q":"A unique physical address burned into a NIC is a:","choices":["IP address","Subnet","MAC address","Gateway"],"answer":2,"explain":"MAC is the layer-2 hardware address."},
+  {"q":"Windows command to view IP config:","choices":["netstat","ifconfig","ping","ipconfig"],"answer":3,"explain":"Use `ipconfig /all` on Windows."}
+]
